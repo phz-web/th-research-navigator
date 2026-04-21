@@ -1,0 +1,15 @@
+{
+  "name": "journals",
+  "fields": [
+    { "name": "id",            "type": "string"  },
+    { "name": "display_name",  "type": "string"  },
+    { "name": "publisher",     "type": "string",  "facet": true,  "optional": true },
+    { "name": "scope_bucket",  "type": "string",  "facet": true   },
+    { "name": "tier_flag",     "type": "string",  "facet": true   },
+    { "name": "issn_print",    "type": "string",  "optional": true },
+    { "name": "issn_online",   "type": "string",  "optional": true },
+    { "name": "active_flag",   "type": "bool",    "facet": true   },
+    { "name": "papers_count",  "type": "int32",   "sort": true    }
+  ],
+  "default_sorting_field": "papers_count"
+}

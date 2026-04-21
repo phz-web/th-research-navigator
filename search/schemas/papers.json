@@ -1,0 +1,23 @@
+{
+  "name": "papers",
+  "fields": [
+    { "name": "id",                  "type": "string"   },
+    { "name": "title",               "type": "string"   },
+    { "name": "abstract",            "type": "string",  "optional": true },
+    { "name": "authors_text",        "type": "string[]" },
+    { "name": "journal_id",          "type": "int64"    },
+    { "name": "journal_name",        "type": "string",  "facet": true },
+    { "name": "journal_scope_bucket","type": "string",  "facet": true },
+    { "name": "journal_tier",        "type": "string",  "facet": true },
+    { "name": "publication_year",    "type": "int32",   "facet": true,   "sort": true },
+    { "name": "publication_date",    "type": "string",  "optional": true },
+    { "name": "cited_by_count",      "type": "int32",   "facet": true,   "sort": true },
+    { "name": "is_oa",               "type": "bool",    "facet": true },
+    { "name": "primary_topic",       "type": "string",  "facet": true,   "optional": true },
+    { "name": "doi",                 "type": "string",  "optional": true },
+    { "name": "landing_page_url",    "type": "string",  "optional": true }
+  ],
+  "default_sorting_field": "cited_by_count",
+  "token_separators": ["-", "/", "."],
+  "symbols_to_index": []
+}

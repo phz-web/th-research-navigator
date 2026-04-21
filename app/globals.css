@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   CSS Custom Properties — light / dark mode
+   Accent: deep teal  hsl(195 50% 28%) light / hsl(195 40% 60%) dark
+   ============================================================ */
+
+:root {
+  /* Accent */
+  --accent-hsl: 195 50% 28%;
+  --accent-muted-hsl: 195 30% 42%;
+
+  /* Surfaces */
+  --surface-hsl: 0 0% 100%;
+  --surface-raised-hsl: 0 0% 97%;
+  --border-hsl: 0 0% 87%;
+
+  /* Ink */
+  --ink-hsl: 0 0% 10%;
+  --ink-muted-hsl: 0 0% 36%;
+  --ink-subtle-hsl: 0 0% 55%;
+}
+
+.dark {
+  --accent-hsl: 195 40% 60%;
+  --accent-muted-hsl: 195 25% 48%;
+
+  --surface-hsl: 220 13% 9%;
+  --surface-raised-hsl: 220 11% 13%;
+  --border-hsl: 220 8% 22%;
+
+  --ink-hsl: 0 0% 94%;
+  --ink-muted-hsl: 0 0% 68%;
+  --ink-subtle-hsl: 0 0% 48%;
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(var(--surface-hsl));
+  color: hsl(var(--ink-hsl));
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Headings use serif when explicitly classed */
+.font-display {
+  font-family: var(--font-source-serif), Georgia, serif;
+}
+
+/* Focus visible ring — consistent and accessible */
+:focus-visible {
+  outline: 2px solid hsl(var(--accent-hsl));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--accent-hsl) / 0.18);
+}

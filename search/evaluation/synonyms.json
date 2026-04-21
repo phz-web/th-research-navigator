@@ -1,0 +1,80 @@
+{
+  "_comment": "Typesense synonyms for the papers collection. Keep one-way synonyms where terms are not truly equivalent (e.g. 'airbnb' is an example of 'sharing economy', not identical). Apply via `POST /collections/papers/synonyms/<id>`. Document every entry in docs/search-quality.md.",
+  "synonyms": [
+    {
+      "id": "smart-tourism",
+      "root": "smart tourism",
+      "synonyms": ["smart tourism", "smart destination", "smart destinations", "ict tourism", "digital tourism"]
+    },
+    {
+      "id": "sharing-economy",
+      "root": "sharing economy",
+      "synonyms": ["sharing economy", "collaborative consumption", "peer to peer accommodation", "p2p accommodation"]
+    },
+    {
+      "id": "airbnb-one-way",
+      "root": "airbnb",
+      "synonyms": ["airbnb", "short term rental", "short-term rental", "peer to peer lodging"]
+    },
+    {
+      "id": "destination-branding",
+      "root": "destination branding",
+      "synonyms": ["destination branding", "place branding", "destination brand", "place brand"]
+    },
+    {
+      "id": "destination-image",
+      "root": "destination image",
+      "synonyms": ["destination image", "place image", "tourism image"]
+    },
+    {
+      "id": "service-robots",
+      "root": "service robots",
+      "synonyms": ["service robots", "service robot", "hospitality robots", "robotic service"]
+    },
+    {
+      "id": "sustainable-tourism",
+      "root": "sustainable tourism",
+      "synonyms": ["sustainable tourism", "sustainability tourism", "green tourism", "responsible tourism", "eco tourism", "ecotourism"]
+    },
+    {
+      "id": "ugc",
+      "root": "user generated content",
+      "synonyms": ["user generated content", "user-generated content", "ugc", "online reviews", "tripadvisor"]
+    },
+    {
+      "id": "revenue-management",
+      "root": "revenue management",
+      "synonyms": ["revenue management", "yield management", "dynamic pricing"]
+    },
+    {
+      "id": "servqual",
+      "root": "service quality",
+      "synonyms": ["service quality", "servqual", "servperf"]
+    },
+    {
+      "id": "co-creation",
+      "root": "co creation",
+      "synonyms": ["co creation", "co-creation", "cocreation", "value co-creation", "value cocreation"]
+    },
+    {
+      "id": "dark-tourism",
+      "root": "dark tourism",
+      "synonyms": ["dark tourism", "thana tourism", "thanatourism"]
+    },
+    {
+      "id": "overtourism",
+      "root": "overtourism",
+      "synonyms": ["overtourism", "over tourism", "mass tourism impacts"]
+    },
+    {
+      "id": "china-outbound",
+      "root": "chinese tourists",
+      "synonyms": ["chinese tourists", "china outbound", "mainland chinese tourists"]
+    },
+    {
+      "id": "ai-ml",
+      "root": "machine learning",
+      "synonyms": ["machine learning", "ml", "artificial intelligence", "deep learning"]
+    }
+  ]
+}

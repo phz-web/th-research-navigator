@@ -1,0 +1,158 @@
+# =============================================================================
+# Tourism & Hospitality Research Navigator — retrieval quality evaluation set
+# =============================================================================
+# 20 realistic tourism/hospitality scholar queries covering the field's
+# recognised sub-areas. Each entry declares:
+#   id             short stable identifier
+#   query          what the user types (as-is)
+#   intent         one-line description of what a relevant result looks like
+#   must_contain   terms that a top-10 hit SHOULD contain in its title or
+#                  abstract to count as relevant (used by eval_search.py as a
+#                  WEAK signal — a human still makes the final judgement)
+#   expected_fields where the signal is most likely to live (for diagnosis)
+#   sub_area       taxonomy tag for reporting
+#
+# These queries are a fixed benchmark. Do not rewrite them casually — the
+# whole point is to compare search quality across runs.
+# =============================================================================
+
+queries:
+  - id: Q01
+    query: destination branding social media
+    intent: Papers on branding or brand image of destinations using social media / user-generated content.
+    must_contain: [destination, brand]
+    expected_fields: [title, abstract]
+    sub_area: destination_marketing
+
+  - id: Q02
+    query: place brand loyalty heritage
+    intent: Brand loyalty to places, often heritage destinations; connects to the user's own research area.
+    must_contain: [loyalty]
+    expected_fields: [title, abstract]
+    sub_area: destination_marketing
+
+  - id: Q03
+    query: service robots hotels
+    intent: Adoption, acceptance, or impact of service robots in hotel/hospitality contexts.
+    must_contain: [robot]
+    expected_fields: [title, abstract]
+    sub_area: hospitality_technology
+
+  - id: Q04
+    query: smart tourism destinations
+    intent: Smart-destination frameworks, ICT in tourism, smart-city tourism overlap.
+    must_contain: [smart]
+    expected_fields: [title, abstract]
+    sub_area: tourism_technology
+
+  - id: Q05
+    query: sharing economy Airbnb
+    intent: Sharing economy / P2P accommodation, Airbnb studies.
+    must_contain: [airbnb, sharing]  # OR logic applied in eval
+    expected_fields: [title, abstract]
+    sub_area: hospitality_economics
+
+  - id: Q06
+    query: sustainable tourism climate change
+    intent: Sustainability, climate action, low-carbon tourism, destination resilience.
+    must_contain: [sustainab, climate]  # prefix-style, substring match
+    expected_fields: [title, abstract]
+    sub_area: sustainability
+
+  - id: Q07
+    query: overtourism Venice
+    intent: Overtourism studies, residents' attitudes, urban/island cases. Venice is a common illustrative case.
+    must_contain: [overtourism]
+    expected_fields: [title, abstract]
+    sub_area: urban_tourism
+
+  - id: Q08
+    query: hotel service quality SERVQUAL
+    intent: Service quality measurement in hospitality; SERVQUAL / SERVPERF applications.
+    must_contain: [service quality]
+    expected_fields: [title, abstract]
+    sub_area: hospitality_marketing
+
+  - id: Q09
+    query: tourist experience co-creation
+    intent: Experience-economy / value co-creation in tourism encounters.
+    must_contain: [experience, co-creation]
+    expected_fields: [title, abstract]
+    sub_area: consumer_behaviour
+
+  - id: Q10
+    query: online reviews TripAdvisor sentiment
+    intent: UGC, review analysis, sentiment on OTAs/TripAdvisor. Matches the user's own methodological interest.
+    must_contain: [review]
+    expected_fields: [title, abstract]
+    sub_area: digital_marketing
+
+  - id: Q11
+    query: revenue management hotels pricing
+    intent: Revenue/yield management, dynamic pricing in lodging.
+    must_contain: [revenue, pricing]  # OR
+    expected_fields: [title, abstract]
+    sub_area: hospitality_operations
+
+  - id: Q12
+    query: cultural heritage tourism motivation
+    intent: Heritage-tourism visitor motivations, authenticity.
+    must_contain: [heritage]
+    expected_fields: [title, abstract]
+    sub_area: cultural_tourism
+
+  - id: Q13
+    query: festival event impact community
+    intent: Event/festival socio-economic impacts on host communities.
+    must_contain: [festival, event]  # OR
+    expected_fields: [title, abstract]
+    sub_area: events
+
+  - id: Q14
+    query: China outbound tourism
+    intent: Chinese outbound tourists' behaviour, markets, destination choice.
+    must_contain: [china, chinese]  # OR
+    expected_fields: [title, abstract]
+    sub_area: regional_china
+
+  - id: Q15
+    query: restaurant customer satisfaction loyalty
+    intent: Foodservice/restaurant satisfaction-loyalty chain research.
+    must_contain: [restaurant]
+    expected_fields: [title, abstract]
+    sub_area: foodservice
+
+  - id: Q16
+    query: dark tourism memory
+    intent: Dark/thana tourism, sites of tragedy, memory studies.
+    must_contain: [dark tourism]
+    expected_fields: [title, abstract]
+    sub_area: niche_tourism
+
+  - id: Q17
+    query: wellness spa tourism
+    intent: Wellness and health-tourism / spa services.
+    must_contain: [wellness, spa]  # OR
+    expected_fields: [title, abstract]
+    sub_area: niche_tourism
+
+  - id: Q18
+    query: hotel employee turnover burnout
+    intent: HR in hospitality — turnover intention, burnout, emotional labour.
+    must_contain: [employee, turnover, burnout]  # OR
+    expected_fields: [title, abstract]
+    sub_area: hospitality_hrm
+
+  - id: Q19
+    query: destination image perception
+    intent: Classic destination-image literature.
+    must_contain: [destination image]
+    expected_fields: [title, abstract]
+    sub_area: destination_marketing
+
+  - id: Q20
+    query: AI machine learning tourism forecasting
+    intent: ML/AI methods applied to tourism demand forecasting or behaviour prediction.
+    must_contain: [forecast, machine learning, artificial intelligence]  # OR
+    expected_fields: [title, abstract]
+    sub_area: methods_ai
